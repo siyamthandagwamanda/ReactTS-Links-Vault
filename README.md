@@ -15,7 +15,6 @@
 
 
 # Functional Components
-
 - User can add a link 
 - User can delete a link
 - User can edit a link
@@ -26,8 +25,8 @@
 ##                              Design 1
 
 ## Ui screen user will see, 2 Popup screens / UI Mockup structure.
-## Question ? Store present data to enable search existing data
-## Component 1: Initial Dashboard View (state: On Run).
+- Question ? Store present data to enable search existing data
+- Component 1: Initial Dashboard View (state: On Run).
 
    +----------------------------------------------------------------------+
   |                  MY LINKS VAULT DASHBOARD                             |
@@ -50,13 +49,13 @@
 ##                            Design 2 First PopUp Screen
 
 ## State : Data that changes.
-## Component 2: First Screen View (State: Click Floating button)
-## Question ? Search existing data.
-## Add a Tip : Fill out all fields to keep your vault organized.
-## search bar to accept how many character to determine length.
-## Add links apply css style to separate labels and input fields (nb//placeholders).
-## Delete / Save Button (clicks/hover/background color) border-radius: 0ch advanced width (:
-## Edit / Delete in second PopUp screen.
+- Component 2: First Screen View (State: Click Floating button)
+- Question ? Search existing data.
+- Add a Tip : Fill out all fields to keep your vault organized.
+- search bar to accept how many character to determine length.
+- Add links apply css style to separate labels and input fields (nb//placeholders).
+- Delete / Save Button (clicks/hover/background color) border-radius: 0ch advanced width (:
+- Edit / Delete in second PopUp screen.
 
 
 - Clicking the + button activates
@@ -83,8 +82,8 @@
    +----------------------------------------------------------------------+ 
 
 ##  Design 3 Second PopUp Screen
-## Component 3: Second screen view ( State: Save Form )
-## Submitting a valid form instantly closes Screen 1 and opens Screen 2. for all your saved content
+- Component 3: Second screen view ( State: Save Form )
+- Submitting a valid form instantly closes Screen 1 and opens Screen 2. for all your saved content
 
 
 
