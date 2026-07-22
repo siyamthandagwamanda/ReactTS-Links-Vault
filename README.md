@@ -13,6 +13,15 @@
     popup screen componets 
     Header/LinkForm/Linklist/LinkCard/SearchBar/LinkModel.
 
+
+# Functional Components
+
+- User can add a link 
+- User can delete a link
+- User can edit a link
+- User can search for a link
+- User can store data in LocalStorage.
+
 ##                               Design
 ##                              Design 1
 
@@ -26,11 +35,10 @@
   |                                                                       |
   |                                                                       |
   |                 --------------------------                            |
+  |                |   existing data.         |                           |
+  |                |                          |                           |   
   |                |                          |                           |
-  |                |   message                |                           |   
-  |                |   nothing to show        |                           |
-  |                |   click                  |                           |
-  |                 -------------------------                             |
+  |                 ---------------------------                           |
   |                                                                       |
   |                                                                       |
   |                                                                       |
@@ -39,7 +47,7 @@
   |                                            # Floating Action Button   |
    +----------------------------------------------------------------------+ 
 
-##                            Design 2
+##                            Design 2 First PopUp Screen
 
 ## State : Data that changes.
 ## Component 2: First Screen View (State: Click Floating button)
@@ -48,7 +56,9 @@
 ## search bar to accept how many character to determine length.
 ## Add links apply css style to separate labels and input fields (nb//placeholders).
 ## Delete / Save Button (clicks/hover/background color) border-radius: 0ch advanced width (:
-g
+## Edit / Delete in second PopUp screen.
+
+
 - Clicking the + button activates
 - the background backdrop blur and slides open the unified searching and creation window directly in the screen center.
 
@@ -72,13 +82,25 @@ g
   |                                          [ Delete ] [ Save ]           |
    +----------------------------------------------------------------------+ 
 
+##  Design 3 Second PopUp Screen
+## Component 3: Second screen view ( State: Save Form )
+## Submitting a valid form instantly closes Screen 1 and opens Screen 2. for all your saved content
 
 
 
+# UI Functional 
+# How localStorage is used.
 
+- Local Storage is the browser's built-in storage that saves data as key-value pairs. It allows information
+- It allows information to remain available even after the browser is refreshed or closed.
 
+- when a user saves a link, the application converts the list of links into into JSON string, i'll use 
+  (JSON.Stringify())
 
+- LocalStorage, e.g., setItem()
+- When the application starts, it retrievs the saved data from localStorage. use e.g., seItem()
 
+- 
 
 
 
