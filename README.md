@@ -47,10 +47,10 @@
 ## Add a Tip : Fill out all fields to keep your vault organized.
 ## search bar to accept how many character to determine length.
 ## Add links apply css style to separate labels and input fields (nb//placeholders).
-## Cancel / Save Button (clicks/hover/background color) border-radius: 0ch advanced width (:
-
+## Delete / Save Button (clicks/hover/background color) border-radius: 0ch advanced width (:
+g
 - Clicking the + button activates
-- the background backdrop blur and slides open the unified searchingand creation window directly in the screen center.
+- the background backdrop blur and slides open the unified searching and creation window directly in the screen center.
 
    +----------------------------------------------------------------------+
   |                  MY LINKS VAULT DASHBOARD                              |
@@ -63,13 +63,13 @@
   |   | | TIP: Fill out all fields to.                     |       |       |
   |   | +--------------------------------------------------+       |       |
   |   | Add  New Links                                             |       |
-  |   | - Title.          [           ]                            |       |
-  |   | - Link(Url).      [           ]                            |       |
-  |   | - Description.    [           ]                            |       |
-  |   | - Tags #          [           ]                            |       |
+  |   | - Title.          [ Enter Title ]                          |       |
+  |   | - Link(Url).      [ Enter Url   ]                          |       |
+  |   | - Description.    [ What link for? ]                       |       |
+  |   | - Tags #          [ e.g., documentation ]                  |       |
   |   |                                                            |       |
   |   +------------------------------------------------------------+       |
-  |                                          [     ]     [      ]          |
+  |                                          [ Delete ] [ Save ]           |
    +----------------------------------------------------------------------+ 
 
 
