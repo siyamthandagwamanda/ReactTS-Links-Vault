@@ -14,10 +14,10 @@
     Header/LinkForm/Linklist/LinkCard/SearchBar/LinkModel.
 
 ##                               Design
-## Design 1
+##                              Design 1
 
 ## Ui screen user will see, 2 Popup screens / UI Mockup structure.
-
+## Question ? Store present data to enable search existing data
 ## Component 1: Initial Dashboard View (state: On Run).
 
    +----------------------------------------------------------------------+
@@ -30,7 +30,7 @@
   |                |   message                |                           |   
   |                |   nothing to show        |                           |
   |                |   click                  |                           |
-  |                --------------------------                             |
+  |                 -------------------------                             |
   |                                                                       |
   |                                                                       |
   |                                                                       |
@@ -39,29 +39,37 @@
   |                                            # Floating Action Button   |
    +----------------------------------------------------------------------+ 
 
-## Design 2
+##                            Design 2
+
+## State : Data that changes.
 ## Component 2: First Screen View (State: Click Floating button)
+## Question ? Search existing data.
+## Add a Tip : Fill out all fields to keep your vault organized.
+## search bar to accept how many character to determine length.
+## Add links apply css style to separate labels and input fields (nb//placeholders).
+## Cancel / Save Button (clicks/hover/background color) border-radius: 0ch advanced width (:
 
 - Clicking the + button activates
-- the background backdrop blur and slides open the unified searchingand    creation window directly in the screen center.
+- the background backdrop blur and slides open the unified searchingand creation window directly in the screen center.
 
    +----------------------------------------------------------------------+
   |                  MY LINKS VAULT DASHBOARD                              |
   |   +------------------------------------------------------------+       |
-  |   | Vault Manager                                           (X)        |
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |   
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |
-  |   |                                                                    |
-  |                                                                        |
+  |   | Vault Manager                                           (X)|       |
+  |   | ---------------------------------------------------------- |       |  
+  |   | Search Vault Titles                                        |       |
+  |   | [Search existing links _______]                            |       |
+  |   | +--------------------------------------------------+       |       |   
+  |   | | TIP: Fill out all fields to.                     |       |       |
+  |   | +--------------------------------------------------+       |       |
+  |   | Add  New Links                                             |       |
+  |   | - Title.          [           ]                            |       |
+  |   | - Link(Url).      [           ]                            |       |
+  |   | - Description.    [           ]                            |       |
+  |   | - Tags #          [           ]                            |       |
+  |   |                                                            |       |
+  |   +------------------------------------------------------------+       |
+  |                                          [     ]     [      ]          |
    +----------------------------------------------------------------------+ 
 
 
