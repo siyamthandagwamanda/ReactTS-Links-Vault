@@ -1,29 +1,31 @@
 import React from "react";
 import type { LinkItem } from "../../Types/Vault";
-import './LinkCard.module.css';
+import "./LinkCard.css";
 
-interface LinkCardProps{
-    link: LinkItem;
+type Props = {
+  link: LinkItem;
+};
+
+function LinkCard({ link }: Props) {
+  return (
+    <div className="card">
+      <h3>{link.title}</h3>
+
+      {link.tag ? (
+        <span className="badge">{link.tag}</span>
+      ) : null}
+
+      <p>{link.description}</p>
+
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {link.url}
+      </a>
+    </div>
+  );
 }
 
-export default function LinkCard({ link }: LinkCardProps){
-    return (
-
-        <div className="card">
-
-          <div className="card-content">
-                <div className="card-header">
-                    <h3>{link.title}</h3>
-                    {link.tag && <span className="badge">{link.tag}</span>}
-                </div>  
-                <p className="card-desc">{link.description}</p>
-          </div>
-
-          <a href={link.url} target="_blank" rel="noreferror" className="card-link">
-            {link.url}
-          </a>
-        </div>
-
-    );
-}
-
+export default LinkCard;
