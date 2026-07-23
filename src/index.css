@@ -33,6 +33,7 @@ body{
 }
 
 /*Creates Responsive Grid i'lll build with Flexbox*/
+
 .grid{
   display: flex;
   flex-direction: row;
@@ -41,14 +42,29 @@ body{
 }
 
 /* style column on Mobile Phones*/
+
 .grid > * {
   flex: 1 1 100%;
   box-sizing: border-box;
 }
 
 /*Adjust smoothly from mobile phones to large desktop monitors.*/
+
 @media (min-width: 500px) and (max-width: 1200px){
   .grid > * {
     flex: 1 1 clamp(44.444%, 6vw, 50%);
   }
+}
+
+.empty-view{
+  text-align: center;
+  padding: 57px 23px;
+  background-color: #ffffff;
+  border: 2px dashed #e5e7eb;
+  border-radius: 18px;
+  color: #9ca3af;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; 
 }
