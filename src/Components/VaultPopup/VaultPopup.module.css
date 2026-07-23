@@ -12,3 +12,17 @@
 
   padding: 16px;
 }
+
+.modal {
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
