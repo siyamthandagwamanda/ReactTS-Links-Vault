@@ -32,7 +32,7 @@ body{
   margin: 4px 0 0 0;
 }
 
-/*Creates Responsive Grid i'lll build with Flexbox*/
+/* Responsive card layout using Flexbox */
 
 .grid{
   display: flex;
@@ -41,18 +41,17 @@ body{
   gap: 17px;
 }
 
-/* style column on Mobile Phones*/
+/* One card per row on mobile */
 
 .grid > * {
   flex: 1 1 100%;
-  box-sizing: border-box;
 }
 
 /*Adjust smoothly from mobile phones to large desktop monitors.*/
 
-@media (min-width: 500px) and (max-width: 1200px){
+@media (min-width: 768px) {
   .grid > * {
-    flex: 1 1 clamp(44.444%, 6vw, 50%);
+    flex: 1 1 calc(50% - 17px);
   }
 }
 
@@ -78,8 +77,8 @@ body{
 
 /*My Floating action button plus sign*/
 .floating-btn{
-  /* position: fixed; */
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   bottom: 32px;
   right: 32px;
   background-color: #2563eb;
@@ -89,7 +88,7 @@ body{
   height: 56px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 1, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   font-size: 25px;
   z-index: 500;
   display: flex;
