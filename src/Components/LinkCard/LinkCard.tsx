@@ -1,10 +1,17 @@
-import type { LinkItem } from "../../Types/Vault";
-import './LinkCard.module.css';
+// import type { LinkItem } from "../../Types/Vault";
+// import './LinkCard.module.css';
 
-interface LinkCardProps{
-    link: LinkItem;
-}
+// interface LinkCardProps{
+//     link: LinkItem;
+// }
 
-export default function LinkCard(){
-    return
-}
+// export default function LinkCard({ link }: LinkCardProps){
+//     return (
+//         <div className="link-card">
+//             <h3>{link.title}</h3>
+//             <p>{link.description}</p>
+//             {link.tag && <span className="tag">{link.tag}</span>}
+//         </div>
+//     );
+// }
+
