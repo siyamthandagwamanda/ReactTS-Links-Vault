@@ -46,3 +46,9 @@ body{
   box-sizing: border-box;
 }
 
+/*Adjust smoothly from mobile phones to large desktop monitors.*/
+@media (min-width: 500px) and (max-width: 1200px){
+  .grid > * {
+    flex: 1 1 clamp(44.444%, 6vw, 50%);
+  }
+}
