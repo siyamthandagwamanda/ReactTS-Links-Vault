@@ -31,3 +31,11 @@ body{
   font-size: 15px;
   margin: 4px 0 0 0;
 }
+
+/*Creates Responsive Grid i'lll build with Flexbox*/
+.grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 17px;
+}
