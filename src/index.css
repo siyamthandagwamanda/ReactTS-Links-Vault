@@ -56,6 +56,8 @@ body{
   }
 }
 
+/* */
+
 .empty-view{
   text-align: center;
   padding: 57px 23px;
@@ -67,4 +69,27 @@ body{
   flex-direction: column;
   align-items: center;
   gap: 16px; 
+}
+
+/* */
+.empty-view p{
+  margin: 0;
+}
+
+/*My Floating action button plus sign*/
+.floating-btn{
+  /* position: fixed; */
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 50px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 1, 1);
+  font-size: 25px;
+  z-index: 500;
 }
