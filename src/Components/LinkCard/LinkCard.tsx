@@ -11,7 +11,7 @@ export default function LinkCard({ link }: LinkCardProps){
             <div>
                 <h3>{link.title}</h3>
                 <p>{link.description}</p>
-                {link.tag && <span className="tag">{link.tag}</span>}
+                {link.tag && <span className="badge">{link.tag}</span>}
             </div>
 
             <a href={link.url} target="_blank" rel="noreferror" className="card-link">
