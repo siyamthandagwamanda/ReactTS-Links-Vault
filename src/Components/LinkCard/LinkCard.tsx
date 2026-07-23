@@ -1,4 +1,3 @@
-import React from "react";
 import type { LinkItem } from "../../Types/Vault";
 import "./LinkCard.module.css"
 
