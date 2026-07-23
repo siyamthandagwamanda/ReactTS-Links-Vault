@@ -1,3 +1,4 @@
+import React from "react";
 import type { LinkItem } from "../../Types/Vault";
 import './LinkCard.module.css';
 
@@ -7,17 +8,22 @@ interface LinkCardProps{
 
 export default function LinkCard({ link }: LinkCardProps){
     return (
-        <div className="link-card">
-            <div>
-                <h3>{link.title}</h3>
-                <p>{link.description}</p>
-                {link.tag && <span className="badge">{link.tag}</span>}
-            </div>
 
-            <a href={link.url} target="_blank" rel="noreferror" className="card-link">
+        <div className="card">
 
-            </a>
+          <div className="card-content">
+                <div className="card-header">
+                    <h3>{link.title}</h3>
+                    {link.tag && <span className="badge">{link.tag}</span>}
+                </div>  
+                <p className="card-desc">{link.description}</p>
+          </div>
+
+          <a href={link.url} target="_blank" rel="noreferror" className="card-link">
+            {link.url}
+          </a>
         </div>
+
     );
 }
 
