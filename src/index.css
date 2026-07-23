@@ -1,0 +1,8 @@
+/*Wrapper*/
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f9f9f9;
+  color: #111827
+}
