@@ -59,7 +59,7 @@ export default function App() {
           <h1>My Links Vault</h1>
 
           <p className="subtitle">
-            Your simple personal bookmark layout tool.
+            Keep Track of your favorite links.
           </p>
         </div>
 
@@ -67,14 +67,14 @@ export default function App() {
           className="btn btn-secondary"
           onClick={() => setActiveModal("MANAGE_DIRECTORY")}
         >
-          Directory ({links.length})
+          Link Vault ({links.length})
         </button>
       </header>
 
       {links.length === 0 ? (
         <div className="empty-view">
           <p>
-            No bookmarks saved yet. Click the button below to
+             Click the button below to
             add your first link.
           </p>
 

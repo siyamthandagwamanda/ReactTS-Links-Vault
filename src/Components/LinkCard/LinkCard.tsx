@@ -1,6 +1,6 @@
 import React from "react";
 import type { LinkItem } from "../../Types/Vault";
-import "./LinkCard.css";
+import "./LinkCard.module.css"
 
 type Props = {
   link: LinkItem;

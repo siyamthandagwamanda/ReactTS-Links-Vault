@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { LinkItem } from "../../Types/Vault";
-import "./VaultPopup.css";
+import "./VaultPopup.module.css"
 
 interface VaultPopupProps {
   isOpen: boolean;
@@ -14,7 +14,7 @@ export default function VaultPopup({
   onClose,
   onSubmit,
   existingLinks,
-  
+
 }: VaultPopupProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [title, setTitle] = useState("");

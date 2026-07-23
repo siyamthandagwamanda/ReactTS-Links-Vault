@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { LinkItem } from "../../Types/Vault";
-import "./ManageLinksPopup.css";
+import "./ManageLinksPopup.module.css";
 
 interface ManageLinksPopupProps {
   isOpen: boolean;
