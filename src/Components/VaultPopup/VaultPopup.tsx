@@ -206,11 +206,11 @@ export default function VaultPopup({
                 className="btn btn-secondary"
                 onClick={handleClose}
               >
-                Cancel
+                Delete
               </button>
 
               <button type="submit" className="btn btn-primary">
-                Save Entry
+                Save
               </button>
             </div>
           </form>
