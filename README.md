@@ -11,3 +11,9 @@ This project follows the Agile methodology, where development is completed in sm
 3: Implement viewing, searching, editing, and deleting links.
 4: Improve responsiveness, test the application, and fix bugs.
 5: read from localStorage when initializing state and write to it      inside your CRUD functions.
+
+#next step: 
+Create the link Interface.
+This interface defines the structure of every link stored in the application.
+
+
