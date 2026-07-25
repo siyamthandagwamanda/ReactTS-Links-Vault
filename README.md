@@ -23,3 +23,7 @@ title	    string	     Website title
 url	        string	     Website address
 description	string	     Brief description of the website
 tags	    string	     Optional keywords used for searching
+
+#next step:
+Create the Modal Component.
+It a resuable popup window that displays content above the main page. It will be used whenever the user wants to add a new link or edit an existing link. Using a reusable modal avoids duplicating code and keeps the app organized.
