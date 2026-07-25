@@ -10,13 +10,13 @@ This project follows the Agile methodology, where development is completed in sm
 2. Implement the "Add Link" functionality.
 3. Implement viewing, searching, editing, and deleting links.
 4. Improve responsiveness, test the application, and fix bugs.
-5. read from localStorage when initializing state and write to it      inside your CRUD functions.
+5. read from localStorage when initializing state and write to it inside your CRUD functions.
 
 # next step: 
 Create the link Interface.
 This interface defines the structure of every link stored in the application.
 
-# Property	Data Type	Purpose
+# Property	Data Type	Purpose.
 ____________________________________________________________
 id	        number	     Unique identifier for each link
 title	    string	     Website title
@@ -28,7 +28,7 @@ tags	    string	     Optional keywords used for searching
 Create the Modal Component.
 It a resuable (popup) window that displays content above the main page. It will be used whenever the user wants to add a new link or edit an existing link. Using a reusable modal avoids duplicating code and keeps the app organized.
 
-# when the user clicks the floating + button
+# when the user clicks the floating + button.
 1. showForm changes from false to true.
 2. App.tsx displays the LinkForm component.
 3. LinkForm is wrapped inside the Modal component.
@@ -44,3 +44,7 @@ The next component is LinkForm.tsx, where users will:
 5. Save a new link
 6. Update an existing link
 7. Store the data in localStorage using only useState.
+
+# Create the LinkForm Component.
+The LinkForm component allows users to create a new link or edit an existing one. It is displayed inside the Modal component. The form uses React's useState hook to manage user input, and when the user clicks Save Link, the data is stored in both the application state and localStorage.
+
