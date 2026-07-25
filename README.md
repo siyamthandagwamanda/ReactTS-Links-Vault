@@ -16,4 +16,10 @@ This project follows the Agile methodology, where development is completed in sm
 Create the link Interface.
 This interface defines the structure of every link stored in the application.
 
-
+#Property	Data Type	Purpose
+____________________________________________________________
+id	        number	     Unique identifier for each link
+title	    string	     Website title
+url	        string	     Website address
+description	string	     Brief description of the website
+tags	    string	     Optional keywords used for searching
