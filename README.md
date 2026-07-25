@@ -25,7 +25,7 @@ description	string	     Brief description of the website
 tags	    string	     Optional keywords used for searching
 
 # next step:
-Create the Modal Component.
+# Create the Modal Component.
 It a resuable (popup) window that displays content above the main page. It will be used whenever the user wants to add a new link or edit an existing link. Using a reusable modal avoids duplicating code and keeps the app organized.
 
 # when the user clicks the floating + button.
@@ -36,7 +36,7 @@ It a resuable (popup) window that displays content above the main page. It will 
 5. Clicking the × button calls the close() function, hiding the popup.
 
 # next step:
-The next component is LinkForm.tsx, where users will:
+# The next component is LinkForm:
 1. Enter the title
 2. Enter the URL
 3. Enter the Description
@@ -54,3 +54,21 @@ The LinkForm component allows users to create a new link or edit an existing one
 3. When Save Link is clicked
 the required fields are validated. a new link is created or the existing one is updated. The links state is required. The updated array is saved to localStorage. The popup closes. 
 4. App.tsx will pass the updated links state to SavedLinks, the displayed list refreshes automatically.
+
+# next step
+# Create SavedLinks component:
+Display all saved links. Include the search bar. Filter links by Title, Url, Description, or Tags.
+Render each link using the reusable LinkCard component.
+
+# The search text is stored using useState.
+As the user types, the filter() array method checks every saved link. The search looks for matches in:
+Title, Url, Description, Tags
+Matching links are displayed using the LinkCard component. If no links match, a 
+"No links found." message is displayed.
+
+# next step:
+# Create LinkCard component:
+It will display each saved link with its details and provide Edit and Delete buttons to complete the CRUD functionality.
+
+The LinkCard component is responsible for displaying the details of a single saved link. It also provides the Edit and Delete buttons, completing the CRUD functionality. When the user clicks Edit, the selected link is sent back to App.tsx,
+which opens the popup with the existing information. When Delete is clicked, the link is removed from both the application state and loc
