@@ -1,18 +1,18 @@
 import "./Modal.css";
 
 interface ModalProps{
-    chidren: React.ReactNode;
-    close: () => void;
+    onclose: () => void;
+    children: React.ReactNode;
 }
 
-function Modal({ chidren, close } : ModalProps){
+function Modal({ onclose, children  } : ModalProps){
     return(
         <div className="overlay">
             <div className="modal">
-                <button className="close-button" onClick={close}>
+                <button className="close-button" onClick={onclose}>
                      ×
                 </button>
-                {chidren}
+                {children}
             </div>
         </div>
     );

@@ -15,8 +15,6 @@ function LinkForm({
   editingLink,
   close,
 }: LinkFormProps) {
-
-  
   const [title, setTitle] = useState(editingLink?.title || "");
   const [url, setUrl] = useState(editingLink?.url || "");
   const [description, setDescription] = useState(
@@ -24,18 +22,14 @@ function LinkForm({
   );
   const [tags, setTags] = useState(editingLink?.tags || "");
 
- 
   const [errorMessage, setErrorMessage] = useState("");
 
   
-  function handleSubmit(e: React.FormEvent) {
-   
+  function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
 
-  
     setErrorMessage("");
 
-  
     if (!title.trim() || !url.trim() || !description.trim()) {
       setErrorMessage("Please fill out all required fields.");
       return;
@@ -44,7 +38,6 @@ function LinkForm({
     let updatedLinks: Link[];
 
     if (editingLink) {
-     
       updatedLinks = links.map((link) =>
         link.id === editingLink.id
           ? {
@@ -57,7 +50,6 @@ function LinkForm({
           : link
       );
     } else {
-     
       const newLink: Link = {
         id: Date.now(),
         title,
@@ -69,28 +61,24 @@ function LinkForm({
       updatedLinks = [...links, newLink];
     }
 
-   
     setLinks(updatedLinks);
     localStorage.setItem("links", JSON.stringify(updatedLinks));
 
-    close();
+    close()
   }
 
   return (
-    <Modal close={close}>
-
+    
+    <Modal onclose={close}>
       <h2>{editingLink ? "Edit Link" : "Save New Link"}</h2>
 
-      
       {errorMessage && (
         <p style={{ color: "#e11d48", fontSize: "14px", marginBottom: "10px" }}>
           {errorMessage}
         </p>
       )}
 
-      
       <form onSubmit={handleSubmit}>
-
         <input
           type="text"
           placeholder="Title *"
@@ -121,9 +109,7 @@ function LinkForm({
         <button type="submit">
           {editingLink ? "Update Link" : "Save Link"}
         </button>
-
       </form>
-
     </Modal>
   );
 }
