@@ -48,3 +48,9 @@ The next component is LinkForm.tsx, where users will:
 # Create the LinkForm Component.
 The LinkForm component allows users to create a new link or edit an existing one. It is displayed inside the Modal component. The form uses React's useState hook to manage user input, and when the user clicks Save Link, the data is stored in both the application state and localStorage.
 
+# When the popup opens,
+1. the input fields are empty for a new link.
+2. if the user clicks Edit, the fields are automatically  filled with the selected links information.
+3. When Save Link is clicked
+the required fields are validated. a new link is created or the existing one is updated. The links state is required. The updated array is saved to localStorage. The popup closes. 
+4. App.tsx will pass the updated links state to SavedLinks, the displayed list refreshes automatically.
