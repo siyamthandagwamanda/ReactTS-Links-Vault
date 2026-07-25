@@ -40,9 +40,29 @@ function LinkForm({
                 tags,
             }
             : link
-        );
-        }
-    } else {
-        
+         );
+        } else {
+          const newLink: Link = {
+            id: Date.now(),
+            title,
+            url,
+            description,
+            tags,
+        };
+
+        updatedLinks = [...links, newLink];
     }
+
+    setLinks(updatedLinks);
+
+    localStorage.setItem(
+        "links",
+        JSON.stringify(updatedLinks)
+    );
+
+    close();
 }
+
+return(
+    
+)
