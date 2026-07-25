@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Modal from "./Modal";
-import { Link } from "../types/Link";
+import Modal from "../Modal/Modal";
+import type { Link } from "../../Types/Link";
 
 interface LinkFormProps {
   links: Link[];
