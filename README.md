@@ -28,7 +28,7 @@ tags	    string	     Optional keywords used for searching
 Create the Modal Component.
 It a resuable (popup) window that displays content above the main page. It will be used whenever the user wants to add a new link or edit an existing link. Using a reusable modal avoids duplicating code and keeps the app organized.
 
-#when the user clicks the floating + button
+# when the user clicks the floating + button
 1. showForm changes from false to true.
 2. App.tsx displays the LinkForm component.
 3. LinkForm is wrapped inside the Modal component.
