@@ -8,3 +8,41 @@ interface LinkFormProps{
     editingLink: Link | null;
     close: () => void;
 }
+
+function LinkForm({
+    links,
+    setLinks,
+    editingLink,
+    close,
+} : LinkFormProps) {
+    
+    const [title, setTitle] = useState(editingLink?.title || "");
+    const [url, setUrl] = useState(editingLink?.url || "");
+    const [description, setDescription] = useState( editingLink?.description || "");
+
+    const [tags, setTags] = useState(editingLink?.tags || "");
+
+    function saveLink(){
+        if (!title || !url || !description){
+            alert("Please complete all required fields.");
+            return;
+        }
+
+        let updatedLinks: Link[];
+
+        if (editingLink){
+            updatedLinks = links.map((link) => link.id === editingLink.id?
+            {
+                ...editingLink,
+                title,
+                url,
+                description,
+                tags,
+            }
+            : link
+        );
+        }
+    } else {
+        
+    }
+}
