@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6fb;
-    color: #333;
+    color: #1db676;
 }
 
 .container {
@@ -24,12 +24,12 @@ body {
 }
 
 .header h1 {
-    color: #2563eb;
+    color: #1db676;
     margin-bottom: 10px;
 }
 
 .header p {
-    color: #666;
+    color: #5b7237;
 }
 
 
@@ -57,7 +57,7 @@ body {
 }
 
 .floating-button:hover {
-    background: #581db6;
+    background: #1db676;
     transform: scale(1.1);
 }
 
@@ -68,7 +68,7 @@ body {
     padding: 12px;
     margin: 20px 0;
 
-    border: 1px solid #ccc;
+    border: 2px solid #879fd3;
     border-radius: 8px;
 
     font-size: 16px;
@@ -85,17 +85,17 @@ body {
 
     border-radius: 12px;
 
-    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    box-shadow: 0 4px 8px rgba(121, 108, 108, 0.1);
 }
 
 .link-card h3 {
-    color: #000000;
+    color: #01075c;
 }
 
 .link-card a {
     display: block;
     margin: 10px 0;
-    color: #2a418a;
+    color: #6f6592;
     text-decoration: none;
     word-break: break-word;
 }
@@ -121,7 +121,7 @@ button {
 }
 
 .edit-btn {
-    background: #2563eb;
+    background: #879fd3;
     color: white;
 }
 
@@ -130,7 +130,7 @@ button {
 }
 
 .delete-btn {
-    background: crimson;
+    background: rgb(100, 97, 97);
     color: white;
 }
 
@@ -148,7 +148,7 @@ textarea {
 
     margin-top: 12px;
 
-    border: 1px solid #ccc;
+    border: 1px solid #a9a8ff;
 
     border-radius: 8px;
 
