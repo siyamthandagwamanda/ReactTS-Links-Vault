@@ -2,7 +2,7 @@ import type { Link } from "../../Types/Link";
 
 interface LinkCardProps {
   link: Link;
-  onDelete: (id: number | string) => void;
+  onDelete: (id: number) => void;
   onEdit: (link: Link) => void;
 }
 
@@ -17,11 +17,7 @@ function LinkCard({ link, onDelete, onEdit }: LinkCardProps) {
     <div className="link-card">
       <h3>{link.title}</h3>
 
-      <a
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={link.url} target="_blank" rel="noopener noreferrer">
         {link.url}
       </a>
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { Link } from "../../Types/Link";
-import type {LinkCard} from "../LinkCard";
+import type { Link } from "../../Types/Link"; // adjust path as needed
+import LinkCard from "../LinkCard/LinkCard";
 
 interface SavedLinksProps {
   links: Link[];
@@ -14,11 +14,23 @@ function SavedLinks({
   setLinks,
   setEditingLink,
   openForm,
-
 }: SavedLinksProps) {
   const [search, setSearch] = useState("");
 
-    const filteredLinks = links.filter((link) => {
+  // Handler 1: Delete a link by ID
+  function handleDelete(id: number) {
+    const updated = links.filter((link) => link.id !== id);
+    setLinks(updated);
+    localStorage.setItem("links", JSON.stringify(updated));
+  }
+
+  // Handler 2: Set the editing link and open form
+  function handleEdit(link: Link) {
+    setEditingLink(link);
+    openForm();
+  }
+
+  const filteredLinks = links.filter((link) => {
     const searchText = search.toLowerCase();
 
     return (
@@ -45,14 +57,11 @@ function SavedLinks({
         <p>No links found.</p>
       ) : (
         filteredLinks.map((link) => (
-            
           <LinkCard
             key={link.id}
             link={link}
-            links={links}
-            setLinks={setLinks}
-            setEditingLink={setEditingLink}
-            openForm={openForm}
+            onDelete={handleDelete}
+            onEdit={handleEdit}
           />
         ))
       )}
