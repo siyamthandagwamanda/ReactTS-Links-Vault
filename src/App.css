@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6fb;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+}
+
+
+
+.floating-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    width: 65px;
+    height: 65px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #2563eb;
+    color: white;
+
+    font-size: 35px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+
+    transition: .3s;
+}
+
+.floating-button:hover {
+    background: #1d4ed8;
+    transform: scale(1.1);
+}
+
+
+
+.search-box {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+
+.link-card {
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+}
+
+.link-card h3 {
+    color: #2563eb;
+}
+
+.link-card a {
+    display: block;
+    margin: 10px 0;
+    color: #0d6efd;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.link-card p {
+    margin: 8px 0;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+
+button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.edit-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+.delete-btn {
+    background: crimson;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal h2 {
+    margin-bottom: 15px;
+}
+
+.modal button:last-child {
+    width: 100%;
+    margin-top: 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.modal button:last-child:hover {
+    background: #1d4ed8;
+}
+
+
+
+@media (max-width:768px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .floating-button {
+        width: 55px;
+        height: 55px;
+        font-size: 30px;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+}
