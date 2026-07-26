@@ -17,14 +17,14 @@ function SavedLinks({
 }: SavedLinksProps) {
   const [search, setSearch] = useState("");
 
-  // Handler 1: Delete a link by ID
+  
   function handleDelete(id: number) {
     const updated = links.filter((link) => link.id !== id);
     setLinks(updated);
     localStorage.setItem("links", JSON.stringify(updated));
   }
 
-  // Handler 2: Set the editing link and open form
+  
   function handleEdit(link: Link) {
     setEditingLink(link);
     openForm();
