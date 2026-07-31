@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Link } from "../../Types/Link"; // adjust path as needed
+import type { Link } from "../../Types/Link"; 
 import LinkCard from "../LinkCard/LinkCard";
 
 interface SavedLinksProps {
