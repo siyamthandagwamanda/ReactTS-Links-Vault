@@ -1,4 +1,3 @@
-# ReactTS Links Vault
 
 For this project, the SDLC begins by identifying the requirements, such as storing links, searching, editing, deleting, and saving data using localStorage. The application is then designed with reusable React components, implemented using React and TypeScript
 
