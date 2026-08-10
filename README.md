@@ -22,8 +22,7 @@ deleting your favourite links, persisted locally in the browser via
 #Project structure
 src/
 ├── Types/
-│ └── Link.ts 
-# shared Link interface
+│ └── Link.ts #shared Link interface
 ├── Components/
 │ ├── LinkCard/ 
 # renders one saved link
