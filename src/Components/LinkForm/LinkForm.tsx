@@ -9,12 +9,7 @@ interface LinkFormProps {
   close: () => void;
 }
 
-function LinkForm({
-  links,
-  setLinks,
-  editingLink,
-  close,
-}: LinkFormProps) {
+function LinkForm({ links, setLinks, editingLink, close }: LinkFormProps) {
   const [title, setTitle] = useState(editingLink?.title || "");
   const [url, setUrl] = useState(editingLink?.url || "");
   const [description, setDescription] = useState(
@@ -24,8 +19,7 @@ function LinkForm({
 
   const [errorMessage, setErrorMessage] = useState("");
 
-  
-  function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     setErrorMessage("");
@@ -35,19 +29,13 @@ function LinkForm({
       return;
     }
 
-    let updatedLinks: Link[];
-
     if (editingLink) {
-      updatedLinks = links.map((link) =>
-        link.id === editingLink.id
-          ? {
-              ...editingLink,
-              title,
-              url,
-              description,
-              tags,
-            }
-          : link
+      setLinks(
+        links.map((link) =>
+          link.id === editingLink.id
+            ? { ...editingLink, title, url, description, tags }
+            : link
+        )
       );
     } else {
       const newLink: Link = {
@@ -58,18 +46,14 @@ function LinkForm({
         tags,
       };
 
-      updatedLinks = [...links, newLink];
+      setLinks([...links, newLink]);
     }
 
-    setLinks(updatedLinks);
-    localStorage.setItem("links", JSON.stringify(updatedLinks));
-
-    close()
+    close();
   }
 
   return (
-    
-    <Modal onclose={close}>
+    <Modal onClose={close}>
       <h2>{editingLink ? "Edit Link" : "Save New Link"}</h2>
 
       {errorMessage && (
