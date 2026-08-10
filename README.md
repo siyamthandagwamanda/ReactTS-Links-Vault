@@ -22,17 +22,25 @@ deleting your favourite links, persisted locally in the browser via
 #Project structure
 src/
 ├── Types/
-│ └── Link.ts #shared Link interface
+│ └── Link.ts
+shared Link interface
+
 ├── Components/
 │ ├── LinkCard/ 
-# renders one saved link
+renders one saved link
+
 │ ├── SavedLinks/ 
-# search box + list of LinkCards
+search box + list of LinkCards
+
 │ ├── Modal/ 
-# generic overlay/dialog wrapper
-│ └── LinkForm/ 
-# create/edit form, rendered inside Modal
-├── App.tsx 
-# owns state, wires everything together
+generic overlay/dialog wrapper
+
+│ └── LinkForm/
+
+create/edit form, rendered inside Modal
+├── App.tsx
+ 
+owns state, wires everything together
 └── main.tsx 
-# React entry point
+
+React entry point
