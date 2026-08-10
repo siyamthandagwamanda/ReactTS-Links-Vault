@@ -24,7 +24,7 @@ function LinkCard({ link, onDelete, onEdit }: LinkCardProps) {
       <p>{link.description}</p>
 
       <p>
-        <strong>Tags:</strong> {link.tags || "None"}
+        <strong>Tag:</strong> {link.tag || "None"}
       </p>
 
       <div className="card-buttons">

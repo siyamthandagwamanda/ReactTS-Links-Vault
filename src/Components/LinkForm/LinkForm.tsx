@@ -15,7 +15,7 @@ function LinkForm({ links, setLinks, editingLink, close }: LinkFormProps) {
   const [description, setDescription] = useState(
     editingLink?.description || ""
   );
-  const [tags, setTags] = useState(editingLink?.tags || "");
+  const [tag, setTags] = useState(editingLink?.tag || "");
 
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -33,7 +33,7 @@ function LinkForm({ links, setLinks, editingLink, close }: LinkFormProps) {
       setLinks(
         links.map((link) =>
           link.id === editingLink.id
-            ? { ...editingLink, title, url, description, tags }
+            ? { ...editingLink, title, url, description, tag }
             : link
         )
       );
@@ -43,7 +43,7 @@ function LinkForm({ links, setLinks, editingLink, close }: LinkFormProps) {
         title,
         url,
         description,
-        tags,
+        tag,
       };
 
       setLinks([...links, newLink]);
@@ -85,8 +85,8 @@ function LinkForm({ links, setLinks, editingLink, close }: LinkFormProps) {
 
         <input
           type="text"
-          placeholder="Tags (optional)"
-          value={tags}
+          placeholder="Tag (optional)"
+          value={tag}
           onChange={(e) => setTags(e.target.value)}
         />
 

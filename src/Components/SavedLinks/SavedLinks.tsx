@@ -37,7 +37,7 @@ function SavedLinks({
       (link.title?.toLowerCase() || "").includes(searchText) ||
       (link.url?.toLowerCase() || "").includes(searchText) ||
       (link.description?.toLowerCase() || "").includes(searchText) ||
-      (link.tags?.toLowerCase() || "").includes(searchText)
+      (link.tag?.toLowerCase() || "").includes(searchText)
     );
   });
 
@@ -47,14 +47,14 @@ function SavedLinks({
 
       <input
         type="text"
-        placeholder="Search by title, URL, description or tags..."
+        placeholder="Search by title, URL, description or tag..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="search-box"
       />
 
       {filteredLinks.length === 0 ? (
-        <p>No links found.</p>
+        <p>No links found. Click btn To Add.</p>
       ) : (
         filteredLinks.map((link) => (
           <LinkCard

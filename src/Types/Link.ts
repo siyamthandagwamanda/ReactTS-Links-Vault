@@ -3,5 +3,5 @@ export interface Link{
     title: string;
     url: string;
     description: string;
-    tags?: string;
+    tag?: string;
 }
