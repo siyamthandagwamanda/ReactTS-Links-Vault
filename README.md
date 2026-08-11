@@ -1,21 +1,84 @@
 <img src="https://socialify.git.ci/siyamthandagwamanda/ReactTS-Links-Vault/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="ReactTS-Links-Vault" width="640" height="320" />
 
-# Link Vault
+# Links Vault 🔗
 
-A small React + TypeScript app for saving, searching, editing and
-deleting your favourite links, persisted locally in the browser via
-`localStorage`. No backend, no auth — just a local vault.
+A simple and responsive **Links Vault** web application built with React, TypeScript, and Vite. The application allows users to save, organize, and manage useful links in one place.
 
-#Features
+## Features
 
-- Add a link with a title, URL, description and optional tags
-- Edit or delete any saved link
-- Search across title, URL, description and tags as you type
-- Data survives a page refresh (persisted to `localStorage`)
+* Add and save useful links
+* Store a link title and URL
+* View saved links in a clean interface
+* Open saved links directly
+* Edit existing links
+* Delete saved links
+* Search through saved links
+* Persist saved links using `localStorage`
+* Data remains available after refreshing the page
+* Responsive design for desktop and mobile devices
 
-#Tech stack
+## Technologies
 
-- [React 19](https://react.dev) + [TypeScript](https://www.         typescriptlang.org/)
-- [Vite](https://vite.dev) for dev server + build
-- No external UI/state libraries — plain `useState`/`useEffect`
+* React
+* TypeScript
+* Vite
+* CSS
+* LocalStorage
 
+## Project Structure
+
+```text
+src/
+├── Components/
+├── Styles/
+├── Types/
+├── App.tsx
+└── main.tsx
+```
+
+## Getting Started
+
+### 1. Clone the project
+
+```bash
+git clone <repository-url>
+```
+
+### 2. Navigate into the project
+
+```bash
+cd react-ts-links-vault
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+
+
+## Data Storage
+
+The application uses the browser's **LocalStorage** to store saved links.
+
+This allows users to:
+
+* Save links without a backend database
+* Keep their links after refreshing the page
+
+## Application
+
+The Links Vault is deployed and available online:
+
+**Live Demo:**
+https://react-ts-links-vault-xi.vercel.app/
+
+## Purpose
+
+This project was created to demonstrate practical frontend development skills using **React, TypeScript, Vite, routing, reusable components, responsive CSS, and browser-based data persistence**.
+
+## Author
+
+**Siyamthanda Gwamanda**
+@Mlab CodeTribe 26/27
