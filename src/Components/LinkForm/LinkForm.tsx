@@ -15,3 +15,7 @@ interface FormData{
   description: string;
   tag: string;
 }
+
+function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
+  
+}
