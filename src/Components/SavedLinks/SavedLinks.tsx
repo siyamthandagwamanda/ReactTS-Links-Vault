@@ -1,34 +1,15 @@
 import { useState } from "react";
-import type { Link } from "../../Types/Link"; 
+import type { Link } from "../../Types/Link";
 import LinkCard from "../LinkCard/LinkCard";
 
 interface SavedLinksProps {
   links: Link[];
-  setLinks: React.Dispatch<React.SetStateAction<Link[]>>;
-  setEditingLink: React.Dispatch<React.SetStateAction<Link | null>>;
-  openForm: () => void;
+  onDelete: (id: number) => void;
+  onEdit: (link: Link) => void;
 }
 
-function SavedLinks({
-  links,
-  setLinks,
-  setEditingLink,
-  openForm,
-}: SavedLinksProps) {
+function SavedLinks({ links, onDelete, onEdit }: SavedLinksProps) {
   const [search, setSearch] = useState("");
-
-  
-  function handleDelete(id: number) {
-    const updated = links.filter((link) => link.id !== id);
-    setLinks(updated);
-    localStorage.setItem("links", JSON.stringify(updated));
-  }
-
-  
-  function handleEdit(link: Link) {
-    setEditingLink(link);
-    openForm();
-  }
 
   const filteredLinks = links.filter((link) => {
     const searchText = search.toLowerCase();
@@ -57,12 +38,7 @@ function SavedLinks({
         <p>No links found. Click btn To Add.</p>
       ) : (
         filteredLinks.map((link) => (
-          <LinkCard
-            key={link.id}
-            link={link}
-            onDelete={handleDelete}
-            onEdit={handleEdit}
-          />
+          <LinkCard key={link.id} link={link} onDelete={onDelete} onEdit={onEdit} />
         ))
       )}
     </div>

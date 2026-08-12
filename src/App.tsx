@@ -2,21 +2,30 @@ import { useState } from "react";
 import "./App.css";
 
 import type { Link } from "./Types/Link";
+import { useLinks } from "./hooks/useLinks";
 import SavedLinks from "./Components/SavedLinks/SavedLinks";
 import LinkForm from "./Components/LinkForm/LinkForm";
 
 function App() {
-  
-  const [links, setLinks] = useState<Link[]>(() => {
-    const savedLinks = localStorage.getItem("links");
-    return savedLinks ? JSON.parse(savedLinks) : [];
-  });
+  const { links, addLink, updateLink, deleteLink } = useLinks();
 
-  
   const [showForm, setShowForm] = useState(false);
-
-  
   const [editingLink, setEditingLink] = useState<Link | null>(null);
+
+  function openAddForm() {
+    setEditingLink(null);
+    setShowForm(true);
+  }
+
+  function openEditForm(link: Link) {
+    setEditingLink(link);
+    setShowForm(true);
+  }
+
+  function closeForm() {
+    setEditingLink(null);
+    setShowForm(false);
+  }
 
   return (
     <div className="container">
@@ -25,35 +34,22 @@ function App() {
         <p>Save, organise and manage your favourite websites.</p>
       </header>
 
-      <SavedLinks
-        links={links}
-        setLinks={setLinks}
-        setEditingLink={setEditingLink}
-        openForm={() => setShowForm(true)}
-      />
+      <SavedLinks links={links} onDelete={deleteLink} onEdit={openEditForm} />
 
-     
       <button
         className="floating-button"
-        onClick={() => {
-          setEditingLink(null);
-          setShowForm(true);
-        }}
+        onClick={openAddForm}
         aria-label="Add new link"
       >
         +
       </button>
 
-   
       {showForm && (
         <LinkForm
-          links={links}
-          setLinks={setLinks}
           editingLink={editingLink}
-          close={() => {
-            setEditingLink(null);
-            setShowForm(false);
-          }}
+          onAdd={addLink}
+          onUpdate={updateLink}
+          close={closeForm}
         />
       )}
     </div>

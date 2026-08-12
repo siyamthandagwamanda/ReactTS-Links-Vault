@@ -92,17 +92,11 @@ function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
       )}
 
       {errorMessage && (
-        <p
-          style={{
-            color: "#e11d48",
-            fontSize: "14px",
-            marginBottom: "10px",
-          }}
-        >
+        <p>
           {errorMessage}
         </p>
       )}
-
+        
       <form onSubmit={handleSubmit}>
        
         <input
@@ -143,3 +137,4 @@ function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
     </Modal>
   );
 }
+export default LinkForm;
