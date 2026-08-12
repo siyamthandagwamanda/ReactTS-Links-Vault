@@ -24,5 +24,5 @@ function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
     tag: editingLink ? editingLink.tag : "",
   });
 
-  
+   const [errorMessage, setErrorMessage] = useState("");
 }
