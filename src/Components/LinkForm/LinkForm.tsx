@@ -39,4 +39,46 @@ function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
       };
     });
   }
+
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+
+    event.preventDefault();
+
+  
+    setErrorMessage("");
+
+    const title = formData.title;
+    const url = formData.url;
+    const description = formData.description;
+    const tag = formData.tag;
+
+  
+    if (
+      !title.trim() ||
+      !url.trim() ||
+      !description.trim()
+    ) {
+      setErrorMessage("Please fill out all required fields.");
+      return;
+    }
+
+    if (editingLink) {
+      onUpdate(editingLink.id, {
+        title: title,
+        url: url,
+        description: description,
+        tag: tag,
+      });
+    } else {
+     
+      onAdd({
+        title: title,
+        url: url,
+        description: description,
+        tag: tag,
+      });
+    }
+
+    close();
+  }
 }
