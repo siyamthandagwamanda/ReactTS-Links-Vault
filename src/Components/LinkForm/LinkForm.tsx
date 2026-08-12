@@ -8,3 +8,10 @@ interface LinkFormProps{
   onUpdate: (id: number, updates: Omit<Link, "id">) => void;
   close: () => void;
 }
+
+interface FormData{
+  title: string;
+  url: string;
+  description: string;
+  tag: string;
+}
