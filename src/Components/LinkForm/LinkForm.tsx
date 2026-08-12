@@ -25,4 +25,18 @@ function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
   });
 
    const [errorMessage, setErrorMessage] = useState("");
+
+   function handleChange(
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
+    const name = event.target.name;
+    const value = event.target.value;
+
+    setFormData((previousData) => {
+      return {
+        ...previousData,
+        [name]: value,
+      };
+    });
+  }
 }
