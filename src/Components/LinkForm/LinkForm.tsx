@@ -81,4 +81,65 @@ function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
 
     close();
   }
+
+  return (
+    <Modal onClose={close}>
+    
+      {editingLink ? (
+        <h2>Edit Link</h2>
+      ) : (
+        <h2>Save New Link</h2>
+      )}
+
+      {errorMessage && (
+        <p
+          style={{
+            color: "#e11d48",
+            fontSize: "14px",
+            marginBottom: "10px",
+          }}
+        >
+          {errorMessage}
+        </p>
+      )}
+
+      <form onSubmit={handleSubmit}>
+       
+        <input
+          type="text"
+          name="title"
+          placeholder="Title *"
+          value={formData.title}
+          onChange={handleChange}
+        />
+
+        <input
+          type="url"
+          name="url"
+          placeholder="Website URL *"
+          value={formData.url}
+          onChange={handleChange}
+        />
+
+        <textarea
+          name="description"
+          placeholder="Description *"
+          value={formData.description}
+          onChange={handleChange}
+        />
+
+        <input
+          type="text"
+          name="tag"
+          placeholder="Tag (optional)"
+          value={formData.tag}
+          onChange={handleChange}
+        />
+
+        <button type="submit">
+          {editingLink ? "Update Link" : "Save Link"}
+        </button>
+      </form>
+    </Modal>
+  );
 }
