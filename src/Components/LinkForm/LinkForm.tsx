@@ -17,5 +17,12 @@ interface FormData{
 }
 
 function LinkForm({ editingLink, onAdd, onUpdate, close, }: LinkFormProps){
+  const [formData, setFormData] = useState<FormData>({
+    title: editingLink ? editingLink.title : "",
+    url: editingLink ? editingLink.url : "",
+    description: editingLink ? editingLink.description : "",
+    tag: editingLink ? editingLink.tag : "",
+  });
+
   
 }
