@@ -30,8 +30,11 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1>Link Vault</h1>
-        <p>Save, organise and manage your favourite websites.</p>
+        <h1>link Quarry</h1>
+        <p>
+          Save, organise and manage your favourite websites.
+
+        </p>
       </header>
 
       <SavedLinks links={links} onDelete={deleteLink} onEdit={openEditForm} />
