@@ -26,6 +26,8 @@ body {
 .header h1 {
     color: #1db676;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .header p {
