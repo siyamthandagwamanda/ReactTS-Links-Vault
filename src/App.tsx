@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1>link Quarry</h1>
+        <h1>Link Quarry</h1>
         <p>
           Save, organise and manage your favourite websites.
 
