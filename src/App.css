@@ -271,7 +271,7 @@ textarea {
 
 .modal h2 {
     margin-bottom: 15px;
-    color: var(-text-primary);
+    color: var(--text-primary);
 }
 
 .modal button:last-child {
