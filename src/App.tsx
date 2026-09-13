@@ -33,7 +33,7 @@ function App() {
         <h1>Link Quarry</h1>
         <p>
           Save, organise and manage your favourite websites.
-
+          Dig deeper. Find your links
         </p>
       </header>
 
