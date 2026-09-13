@@ -32,8 +32,9 @@ function App() {
       <header className="header">
         <h1>Link Quarry</h1>
         <p>
-          Save, organise and manage your favourite websites.
-            <p>Dig deeper. Find your links</p>
+          Save, organise and manage your favourite links.
+          <br/>
+            <span><p>Dig deeper. Find your links</p></span>
         </p>
       </header>
 
